@@ -1,3 +1,5 @@
+![](https://www.deteact.com/images/deteact_logo_white.png)
+
 # MemTap
 
 **memtap.py** — a utility for dumping data from memcached instances. Allows you to quickly and efficiently extract all keys and values from memcached servers.

